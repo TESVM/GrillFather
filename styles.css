@@ -295,6 +295,17 @@ main {
   margin: 0.6rem 0 0;
 }
 
+.host-photo {
+  margin: 0.7rem 0;
+}
+
+.host-photo img {
+  display: block;
+  width: min(100%, 320px);
+  border-radius: 0.8rem;
+  border: 1px solid color-mix(in srgb, var(--ink) 15%, transparent);
+}
+
 .gallery-grid {
   margin-top: 1rem;
   display: grid;
