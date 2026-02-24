@@ -49,12 +49,23 @@ a {
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
   font-family: "Oswald", sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.35rem;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-decoration: none;
-  padding: 0.7rem 0;
+  padding: 0.45rem 0;
+}
+
+.brand img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--gray-300);
 }
 
 .menu-btn {
@@ -108,6 +119,7 @@ a {
   border: 1px solid var(--gray-300);
   overflow: hidden;
   min-height: 360px;
+  background: #fff;
 }
 
 .hero-media img {
@@ -116,6 +128,11 @@ a {
   min-height: 360px;
   display: block;
   object-fit: cover;
+}
+
+.hero-logo {
+  object-fit: contain;
+  padding: 1rem;
 }
 
 .kicker {
@@ -314,6 +331,10 @@ blockquote {
 
   .menu-btn {
     display: inline-block;
+  }
+
+  .brand span {
+    display: none;
   }
 
   .site-nav {
