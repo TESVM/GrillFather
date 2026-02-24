@@ -25,7 +25,8 @@ body {
   background: radial-gradient(circle at 85% -10%, #5d1d16 0%, transparent 45%),
     radial-gradient(circle at 10% 30%, #4f1c11 0%, transparent 35%),
     var(--bg);
-  line-height: 1.5;
+  font-size: clamp(1.02rem, 0.96rem + 0.22vw, 1.14rem);
+  line-height: 1.65;
   overflow-x: hidden;
 }
 
@@ -55,7 +56,7 @@ footer {
   position: sticky;
   top: 0;
   z-index: 10;
-  padding: 1rem 0;
+  padding: 1rem 0 0.9rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -83,7 +84,7 @@ footer {
 
 .brand-name {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.82rem;
   letter-spacing: 0.02em;
 }
 
@@ -98,7 +99,7 @@ footer {
   color: var(--ink-muted);
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.82rem;
+  font-size: 0.92rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -125,8 +126,8 @@ footer {
 }
 
 .button-small {
-  padding: 0.5rem 0.9rem;
-  font-size: 0.9rem;
+  padding: 0.62rem 1rem;
+  font-size: 0.96rem;
 }
 
 .button-outline {
@@ -139,7 +140,7 @@ main {
 }
 
 .hero {
-  padding: 6rem 0 4rem;
+  padding: 6.5rem 0 4.6rem;
 }
 
 .container {
@@ -166,14 +167,14 @@ main {
 
 .hero h1 {
   margin: 0.3rem 0 1rem;
-  font-size: clamp(2.4rem, 8vw, 5.4rem);
+  font-size: clamp(2.8rem, 8.4vw, 6rem);
   max-width: 16ch;
   line-height: 0.95;
 }
 
 .hero h2 {
   margin: 0 0 1rem;
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-size: clamp(1.35rem, 3.2vw, 2.1rem);
   color: var(--ink);
   font-weight: 500;
   letter-spacing: 0.01em;
@@ -182,7 +183,7 @@ main {
 .hero p {
   max-width: 62ch;
   color: var(--ink-muted);
-  font-size: 1.03rem;
+  font-size: clamp(1.07rem, 1rem + 0.32vw, 1.24rem);
 }
 
 .hero-copy {
@@ -196,7 +197,7 @@ main {
   text-decoration: none;
   border-radius: 999px;
   font-weight: 700;
-  padding: 0.75rem 1.2rem;
+  padding: 0.82rem 1.35rem;
   margin-right: 0.6rem;
   margin-top: 0.8rem;
   transition: transform 180ms ease, filter 180ms ease;
@@ -232,7 +233,7 @@ main {
 }
 
 .section {
-  padding: 2.2rem 0;
+  padding: 2.9rem 0;
   border-top: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
 }
 
@@ -243,17 +244,19 @@ main {
 .section h2 {
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 0.02em;
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  margin: 0 0 0.8rem;
+  font-size: clamp(2.25rem, 5.4vw, 3.8rem);
+  margin: 0 0 1rem;
 }
 
 .section-visual {
-  margin: 0.9rem 0 1.1rem;
+  margin: 1rem 0 1.35rem;
 }
 
 .section-visual img {
   display: block;
   width: 100%;
+  max-height: 640px;
+  object-fit: cover;
   border-radius: 0.95rem;
   border: 1px solid color-mix(in srgb, var(--ink) 15%, transparent);
   box-shadow: 0 16px 34px rgba(0, 0, 0, 0.2);
@@ -262,6 +265,7 @@ main {
 .section p,
 .section li {
   color: var(--ink-muted);
+  font-size: clamp(1.04rem, 1rem + 0.22vw, 1.2rem);
 }
 
 .section ul {
@@ -281,14 +285,15 @@ main {
 
 .host {
   margin-top: 1.2rem;
-  padding: 1rem;
+  padding: 1.2rem;
   border-left: 3px solid var(--accent);
   background: color-mix(in srgb, var(--bg-alt) 70%, transparent);
+  border-radius: 0.7rem;
 }
 
 .host h3 {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: clamp(1.38rem, 1.25rem + 0.35vw, 1.64rem);
 }
 
 .host p {
@@ -301,7 +306,7 @@ main {
 
 .host-photo img {
   display: block;
-  width: min(100%, 320px);
+  width: min(100%, 460px);
   border-radius: 0.8rem;
   border: 1px solid color-mix(in srgb, var(--ink) 15%, transparent);
 }
@@ -337,7 +342,7 @@ main {
   display: block;
   width: 100%;
   height: 100%;
-  min-height: 260px;
+  min-height: 320px;
   object-fit: cover;
 }
 
@@ -350,12 +355,13 @@ main {
 
 .section input[type="email"] {
   flex: 1 1 280px;
-  min-height: 46px;
+  min-height: 52px;
   padding: 0.7rem 0.9rem;
   border-radius: 999px;
   border: 1px solid color-mix(in srgb, var(--ink) 30%, transparent);
   background: color-mix(in srgb, #ffffff 10%, transparent);
   color: var(--ink);
+  font-size: 1rem;
 }
 
 .section input[type="email"]::placeholder {
@@ -522,7 +528,33 @@ footer .container {
 
   .site-header {
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
+  }
+
+  .nav {
+    width: 100%;
+    order: 3;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 0.3rem;
+    scrollbar-width: thin;
+  }
+
+  .nav a {
+    white-space: nowrap;
+    flex: 0 0 auto;
+  }
+
+  .hero {
+    padding-top: 5.4rem;
+  }
+
+  .section {
+    padding: 2.3rem 0;
+  }
+
+  .section-visual img {
+    max-height: 540px;
   }
 
   footer .container {
@@ -532,13 +564,43 @@ footer .container {
 }
 
 @media (max-width: 620px) {
-  .nav {
-    order: 3;
-    width: 100%;
-    justify-content: space-between;
+  .site-header,
+  .hero,
+  .feature-grid,
+  .story,
+  .events,
+  .contact,
+  .site-footer,
+  footer {
+    width: min(100% - 1rem, var(--max));
   }
 
   .hero {
-    padding-top: 4.6rem;
+    padding-top: 4.8rem;
+    padding-bottom: 3.6rem;
+  }
+
+  .hero .btn-primary,
+  .hero .btn-secondary,
+  .section .btn-primary,
+  .section .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section form {
+    gap: 0.55rem;
+  }
+
+  .section input[type="email"] {
+    flex: 1 1 100%;
+  }
+
+  .host-photo img {
+    width: 100%;
+  }
+
+  .gallery-item img {
+    min-height: 250px;
   }
 }
