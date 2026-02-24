@@ -247,6 +247,21 @@ main {
   margin: 0 0 0.8rem;
 }
 
+.section-image {
+  margin: 0.6rem 0 1.1rem;
+}
+
+.section-image img {
+  display: block;
+  width: 100%;
+  max-width: 860px;
+  max-height: 460px;
+  object-fit: cover;
+  border-radius: 1rem;
+  border: 1px solid color-mix(in srgb, var(--ink) 16%, transparent);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+}
+
 .section p,
 .section li {
   color: var(--ink-muted);
